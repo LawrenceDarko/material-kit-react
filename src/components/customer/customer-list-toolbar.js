@@ -10,6 +10,7 @@ import {
 import { Search as SearchIcon } from '../../icons/search';
 import { Upload as UploadIcon } from '../../icons/upload';
 import { Download as DownloadIcon } from '../../icons/download';
+import { TotalCustomers } from '../dashboard/total-customers';
 
 export const CustomerListToolbar = (props) => (
   <Box {...props}>
@@ -52,6 +53,22 @@ export const CustomerListToolbar = (props) => (
     <Box sx={{ mt: 3 }}>
       <Card>
         <CardContent>
+          <Box sx={{
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            flexWrap: 'wrap',
+            
+            // m: -1
+      }}>
+            <TotalCustomers name={"Total incoming bids"} 
+            sx={{ mb: 2 }} />
+            <TotalCustomers name={"Click to Open Windows"}
+             sx={{ mb: 2 }} />
+            <TotalCustomers name={"Send Bulk Message to"} 
+            sx={{ mb: 2 }} />
+          </Box>
+        
           <Box sx={{ maxWidth: 500 }}>
             <TextField
               fullWidth
@@ -71,6 +88,7 @@ export const CustomerListToolbar = (props) => (
               variant="outlined"
             />
           </Box>
+         
         </CardContent>
       </Card>
     </Box>

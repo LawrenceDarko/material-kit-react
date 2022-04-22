@@ -33,6 +33,11 @@ const items = [
     title: 'Products'
   },
   {
+    href: '/bid',
+    icon: (<UsersIcon fontSize="small" />),
+    title: 'Bid'
+  },
+  {
     href: '/account',
     icon: (<UserIcon fontSize="small" />),
     title: 'Account'
@@ -52,11 +57,11 @@ const items = [
     icon: (<UserAddIcon fontSize="small" />),
     title: 'Register'
   },
-  {
-    href: '/404',
-    icon: (<XCircleIcon fontSize="small" />),
-    title: 'Error'
-  }
+  // {
+  //   href: '/404',
+  //   icon: (<XCircleIcon fontSize="small" />),
+  //   title: 'Error'
+  // }
 ];
 
 export const DashboardSidebar = (props) => {
@@ -130,9 +135,9 @@ export const DashboardSidebar = (props) => {
                   color="neutral.400"
                   variant="body2"
                 >
-                  Your tier
+                  {/* Your tier
                   {' '}
-                  : Premium
+                  : Premium */}
                 </Typography>
               </div>
               <SelectorIcon
@@ -162,7 +167,7 @@ export const DashboardSidebar = (props) => {
           ))}
         </Box>
         <Divider sx={{ borderColor: '#2D3748' }} />
-        <Box
+        {/* <Box
           sx={{
             px: 2,
             py: 3
@@ -211,7 +216,7 @@ export const DashboardSidebar = (props) => {
               Pro Live Preview
             </Button>
           </NextLink>
-        </Box>
+        </Box> */}
       </Box>
     </>
   );

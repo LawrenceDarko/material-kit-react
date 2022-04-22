@@ -12,16 +12,20 @@ import {
 
 const states = [
   {
-    value: 'alabama',
-    label: 'Alabama'
+    value: 'kumasi',
+    label: 'Kumasi'
   },
   {
-    value: 'new-york',
-    label: 'New York'
+    value: 'accra',
+    label: 'Accra'
   },
   {
-    value: 'san-francisco',
-    label: 'San Francisco'
+    value: 'sunyani',
+    label: 'Sunyani'
+  },
+  {
+    value: 'takoradi',
+    label: 'Takoradi'
   }
 ];
 
@@ -29,10 +33,10 @@ export const AccountProfileDetails = (props) => {
   const [values, setValues] = useState({
     firstName: 'Katarina',
     lastName: 'Smith',
-    email: 'demo@devias.io',
+    email: 'demo@tekdevisal',
     phone: '',
-    state: 'Alabama',
-    country: 'USA'
+    state: 'Kumasi',
+    country: 'Ghana'
   });
 
   const handleChange = (event) => {
@@ -142,8 +146,8 @@ export const AccountProfileDetails = (props) => {
             >
               <TextField
                 fullWidth
-                label="Select State"
-                name="state"
+                label="Select City"
+                name="city"
                 onChange={handleChange}
                 required
                 select

@@ -16,13 +16,16 @@ export const TotalCustomers = (props) => (
             gutterBottom
             variant="overline"
           >
-            TOTAL CUSTOMERS
+            {props.name? props.name : "TOTAL CUSTOMERS"}
           </Typography>
           <Typography
             color="textPrimary"
             variant="h4"
           >
-            1,6k
+            {props.name=="Click to Open Windows"? "Days: 20"
+             :props.name=="Send Bulk Message to"? "All Retailers"
+             : "1,6k"
+            }
           </Typography>
         </Grid>
         <Grid item>
@@ -44,20 +47,21 @@ export const TotalCustomers = (props) => (
           pt: 2
         }}
       >
-        <ArrowUpwardIcon color="success" />
+        {props.name=="Send Bulk Message to"? "": <ArrowUpwardIcon color="success" />}
         <Typography
           variant="body2"
           sx={{
-            mr: 1
+            mr: 1,
+            mb: props.name=="Send Bulk Message to"? 3:0
           }}
         >
-          16%
+          {props.name=="Send Bulk Message to"? "": "16%"}
         </Typography>
         <Typography
           color="textSecondary"
           variant="caption"
         >
-          Since last month
+          {props.name=="Send Bulk Message to"?"":"Since last month"}
         </Typography>
       </Box>
     </CardContent>
